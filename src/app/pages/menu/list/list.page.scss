@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+ion-content {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000;
+  --ion-color-medium: rgb(96, 211, 115);
+
+  ion-slides#slideOne {
+    ion-slide {
+      background-color: whitesmoke;
+      border-radius: 20px;
+    }
+  }
+
+  ion-segment-button {
+    font-size: 16px;
+    color:  #000;
+    border: 0px;
+    border-radius: 0px;
+  }
+
+  .segment-button-checked {
+    background: #FFF;
+    color: var(--ion-color-medium);
+    border-bottom: 3px solid var(--ion-color-primary);
+  }
+
+
+  .message {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #ededf6;
+    color: #343a40 !important;
+    font-family: 'Poppins', sans-serif;
+
+    .titulo {
+      font-size: 25px !important;
+      font-weight: 600 !important;
+    }
+
+    .subtitulo {
+      font-size: 18px !important;
+      font-weight: 400 !important;
+    }
+  }
+
+  .centered {
+    position: absolute;
+    top: 55%;
+    left: 0%;
+  }
+
+  .wrap-text {
+    width: 100%;
+    color: white;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    font-weight: 600;
+    font-size: x-large;
+  }
+
+}

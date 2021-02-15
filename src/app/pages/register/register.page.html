@@ -1,0 +1,20 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <h2>Registrate</h2>
+    </div>
+    <div class="form">
+      <form>
+        <div class="input">
+          <ion-item lines="full">
+            <ion-input type="email" #email required placeholder="Tu correo"></ion-input>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-input type="password" #password required placeholder="Tu contraseña"></ion-input>
+          </ion-item>
+          <ion-button type="submit" color="secondary" shape="round" expand="block" (click)="register(email,password)"> Registrarse </ion-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

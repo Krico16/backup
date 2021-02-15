@@ -1,0 +1,23 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <h2>Inicie Sesion</h2>
+    </div>
+    <div class="form">
+      <form>
+        <div class="input">
+          <ion-item lines="full">
+            <ion-input type="text" #email required placeholder="Tu correo"></ion-input>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-input type="password" #password required placeholder="Tu contraseña"></ion-input>
+          </ion-item>
+          <ion-button type="submit" color="secondary" shape="round" expand="block" (click)="login(email,password)">Ingresar </ion-button>
+          <ion-button type="button" color="danger" shape="round" expand="block" (click)="authService.GoogleAuth()">
+            Ingresar con Google
+          </ion-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>
