@@ -1,26 +1,5 @@
-<ion-header>
-  <ion-toolbar color="secondary">
-    <ion-buttons slot="start">
-      <ion-menu-button autoHide="false"></ion-menu-button>
-
-    </ion-buttons>
-
-
-    <ion-title>Directorio</ion-title>
-
-    <ion-buttons slot="primary">
-      <ion-button color="primary">
-        <ion-icon name="notifications-outline"></ion-icon>
-      </ion-button>
-      <ion-button color="primary">
-        <ion-icon slot="icon-only" name="search"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <div style="background-color: #fff; padding: 10px;">
+  <div style="background-color: #fff; padding: 10px;margin-top: 50px;">
     <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, spaceBetween: 12}" #slideOne id="slideOne">
       <ion-slide *ngFor="let card of [1,2,3]" style="width: 150px; height: 200px;">
         <ion-col>
@@ -58,7 +37,7 @@
   <ion-row>
     <ion-list>
       <ion-item-sliding *ngFor="let data of commerceList |async">
-        <ion-item>
+        <ion-item (click)="goToDetails(data.id)">
           <ion-card>
             <img src="https://placeimg.com/640/480/any">
             <h3 class="centered wrap-text"> {{data.Name}} </h3>

@@ -3,6 +3,7 @@ ion-content {
   --ion-background-color: #ffffff;
   --ion-text-color: #000;
   --ion-color-medium: rgb(96, 211, 115);
+  margin-top: 20px;
 }
 ion-content ion-slides#slideOne ion-slide {
   background-color: whitesmoke;

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+declare var google;
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',

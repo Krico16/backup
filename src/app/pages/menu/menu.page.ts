@@ -13,6 +13,7 @@ export class MenuPage implements OnInit {
   hasNotifications = true;
   NotificationsCount = 3;
 
+
   constructor() {}
 
   ngOnInit() {}

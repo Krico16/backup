@@ -1,3 +1,5 @@
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 import { FirebaseAuthService } from './service/firebase-auth.service';
 import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
@@ -29,6 +31,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AngularFirestoreModule,
     FirebaseAuthService,
+    NativeGeocoder,
+    Geolocation
   ],
   bootstrap: [AppComponent],
 })

@@ -14,12 +14,17 @@ const routes: Routes = [
           import('./list/list.module').then((m) => m.ListPageModule),
       },
       {
+        path: 'details/:id',
+        loadChildren: () =>
+          import('./details/details.module').then((m) => m.DetailsPageModule),
+      },
+      {
         path: '',
         redirectTo: '/menu/list',
         pathMatch: 'full',
       },
     ],
-  },
+  }
 ];
 
 @NgModule({
