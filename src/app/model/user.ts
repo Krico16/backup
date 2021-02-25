@@ -3,4 +3,5 @@ export interface user {
   email: string;
   displayName: string;
   photoURL: string;
+  favorites: Array<string>;
 }

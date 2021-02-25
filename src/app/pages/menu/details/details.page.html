@@ -1,11 +1,16 @@
 <ion-content>
   <div class="a">
     <ion-item>
-      <ion-img src="https://placeimg.com/500/340/any"></ion-img>
+      <ion-img [src]="itemData.ImageUrl"></ion-img>
       <div class="caption-overlay bg-gradient"></div>
       <div class="bottom-text">
         <h2> {{itemData.Direction}} </h2>
         <h4> {{itemData.Contact}} </h4>
+      </div>
+      <div class="top-button">
+        <ion-button (click)="changeState(itemData.id)">
+          <ion-icon [name]="isFavorite?'heart':'heart-outline'"></ion-icon>
+        </ion-button>
       </div>
     </ion-item>
   </div>
@@ -15,18 +20,22 @@
   </div>
   <div class="c">
     <div class="sec">
-      <ion-button size="large" class="bn-space" *ngFor="let a of ['Contacto','Facebook','9211237439']"> {{a}} </ion-button>
+      <ion-button size="default" class="bn-space" (click)="CallNumber(itemData.Contact)">
+        <ion-icon name="call-outline"></ion-icon> {{itemData.Contact}}
+      </ion-button>
+      <ion-button size="default" class="bn-space" *ngFor="let a of itemData.SocialLinks | keyvalue">
+        <ion-icon name="logo-{{a.key}}"></ion-icon> {{a.key}}
+      </ion-button>
     </div>
   </div>
   <div class="d">
-    <div id="mapId" style="height:200px"></div>
-    <ion-item style="cursor: pointer" (click)="locatePosition()">
-      <ion-button fill="clear">
-        <ion-icon slot="start" name="map"></ion-icon>
-        Mi posición
-      </ion-button>
-    </ion-item>
-
+    <div class="map-wrapper">
+      <div id="map_center"></div>
+      <div #map id="map"></div>
+    </div>
+    <ion-button (click)="loadMap()" shape="round" color="dark">
+      <ion-icon slot="start" name="locate"></ion-icon> Mi ubicación
+    </ion-button>
   </div>
 
 </ion-content>

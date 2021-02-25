@@ -39,7 +39,7 @@
       <ion-item-sliding *ngFor="let data of commerceList |async">
         <ion-item (click)="goToDetails(data.id)">
           <ion-card>
-            <img src="https://placeimg.com/640/480/any">
+            <img [src]="data.ImageUrl">
             <h3 class="centered wrap-text"> {{data.Name}} </h3>
           </ion-card>
         </ion-item>

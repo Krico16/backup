@@ -19,12 +19,29 @@ const routes: Routes = [
           import('./details/details.module').then((m) => m.DetailsPageModule),
       },
       {
+        path: 'favorites',
+        loadChildren: () =>
+          import('./favorites/favorites.module').then(
+            (m) => m.FavoritesPageModule
+          ),
+      },
+      {
+        path: 'details',
+        redirectTo: '/menu/list',
+        pathMatch: 'full',
+      },
+      {
         path: '',
         redirectTo: '/menu/list',
         pathMatch: 'full',
       },
     ],
-  }
+  },
+  {
+    path: 'favorites',
+    loadChildren: () =>
+      import('./favorites/favorites.module').then((m) => m.FavoritesPageModule),
+  },
 ];
 
 @NgModule({

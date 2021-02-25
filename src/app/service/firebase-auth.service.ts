@@ -80,6 +80,7 @@ export class FirebaseAuthService {
       email: user.email,
       displayName: user.displayName,
       photoURL: user.photoURL,
+      favorites: user.favorites
     };
 
     return userRef.set(userData, { merge: true });
