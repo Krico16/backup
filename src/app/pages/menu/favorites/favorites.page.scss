@@ -1,4 +1,24 @@
-ion-content{
-    --ion-background-color: white !important;
+:root {
+  --ion-safe-area-top: 20px;
+  --ion-safe-area-bottom: 22px;
+}
 
+ion-content {
+  --ion-background-color: white !important;
+
+  ion-card {
+    ion-img {
+      display: block;
+      height: 180px !important;
+    }
+
+    .info {
+      border-radius: 10px;
+      margin-top: -15%;
+      z-index: 3;
+      position: absolute;
+      margin-left: 25px;
+      background-color: white;
+    }
+  }
 }

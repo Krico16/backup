@@ -8,8 +8,8 @@ import { Platform } from '@ionic/angular';
 })
 export class AppComponent {
   userData: any = {
-    displayName: '',
-    photoURL: '',
+    displayName: 'Usuario anonimo',
+    photoURL: 'https://pbs.twimg.com/profile_images/3561617856/cde7c8d60a412ac1e8c956566d07dc39_400x400.jpeg',
   };
 
   constructor(private platform: Platform) {}
@@ -21,6 +21,8 @@ export class AppComponent {
   }
 
   getData() {
-    this.userData = JSON.parse(localStorage.getItem('user'));
+    if(localStorage.getItem('user')){
+      this.userData = JSON.parse(localStorage.getItem('user'));
+    }
   }
 }

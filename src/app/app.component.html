@@ -4,20 +4,20 @@
       <ion-toolbar color="primary">
         <ion-title>
           <ion-avatar>
-            <ion-img [src]="userData.photoURL" class="userImg"></ion-img>
+            <ion-img [src]="userData.photoURL!=null?userData.photoURL:'https://pbs.twimg.com/profile_images/3561617856/cde7c8d60a412ac1e8c956566d07dc39_400x400.jpeg'" class="userImg"></ion-img>
             {{userData.displayName}}
           </ion-avatar>
         </ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-list>
-        <ion-item>Directorio</ion-item>
-        <ion-item>Sobre Nosotros</ion-item>
-        <ion-item>Favoritos</ion-item>
-        <ion-item>Preguntas frecuentes</ion-item>
-        <ion-item>Contacto</ion-item>
-        <ion-item>Ajustes</ion-item>
+      <ion-list lines="none">
+        <ion-item routerLink="menu/list">Directorio</ion-item>
+        <ion-item routerLink="menu/about-us">Sobre Nosotros</ion-item>
+        <ion-item routerLink="menu/favorites">Favoritos</ion-item>
+        <ion-item routerLink="">Preguntas frecuentes</ion-item>
+        <ion-item routerLink="menu/contact">Contacto</ion-item>
+        <ion-item routerLink="">Ajustes</ion-item>
       </ion-list>
     </ion-content>
   </ion-menu>

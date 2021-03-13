@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+ion-content {
+  --ion-background-color: white !important;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  ion-slides {
+    margin-top: 50px;
+    height: 94%;
+    --bullet-background: #900 !important;
+    --bullet-background-active: #009 !important;
+
+    ion-slide {
+      background-image: url('../../../../assets/icon/bg-pattern.png');
+      background-repeat: repeat;
+
+      img {
+        width: 600px;
+        height: auto;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .texto {
+        font-size: 20px;
+      }
+    }
+  }
+}

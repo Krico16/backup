@@ -1,6 +1,11 @@
 <ion-content>
-  <div class="a" style="margin-top: 50px;border:1px solid black">
-    <h1>a</h1>
+  <div class="a" style="margin-top: 50px">
+    <ion-card *ngFor="let item of favoriteList">
+      <ion-img [src]="item.ImageUrl" class="imageFooter"></ion-img>
+      <div class="info">
+        <h2> {{item.Name}} </h2>
+      </div>
+    </ion-card>
   </div>
 
 </ion-content>

@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "resources": "cordova-res android && node scripts/resources.js",
-    "generate": "ionic capacitor copy android && cd ./android/ && ./gradlew assembleDebug && cd .."
+    "generate": "ionic capacitor copy android && cd android/ && gradlew assembleDebug && cd .."
   },
   "private": true,
   "dependencies": {

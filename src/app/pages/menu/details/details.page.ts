@@ -1,7 +1,7 @@
-import { FirebaseService } from './../../../service/firebase.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { FirebaseService } from './../../../service/firebase.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Geolocation } from '@capacitor/core';
 import { CallNumber } from '@ionic-native/call-number/ngx';

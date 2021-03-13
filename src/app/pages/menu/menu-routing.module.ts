@@ -21,9 +21,15 @@ const routes: Routes = [
       {
         path: 'favorites',
         loadChildren: () =>
-          import('./favorites/favorites.module').then(
-            (m) => m.FavoritesPageModule
-          ),
+          import('./favorites/favorites.module').then((m) => m.FavoritesPageModule),
+      },
+      {
+        path: 'about-us',
+        loadChildren: () => import('./about-us/about-us.module').then(m => m.AboutUsPageModule)
+      },
+      {
+        path: 'contact',
+        loadChildren: () => import('./contact/contact.module').then(m => m.ContactPageModule)
       },
       {
         path: 'details',
@@ -38,14 +44,13 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'favorites',
-    loadChildren: () =>
-      import('./favorites/favorites.module').then((m) => m.FavoritesPageModule),
-  },
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactPageModule)
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class MenuPageRoutingModule {}
+export class MenuPageRoutingModule { }

@@ -30,7 +30,7 @@ ion-content{
     width: 80%;
     margin-right: auto;
     margin-left: auto;
-
+    --color:#000;
     ion-button {
       background: #fff;
       font-family: Lato, sans-serif;
@@ -42,7 +42,6 @@ ion-content{
       border-radius: 20px;
       position: relative;
       height: 1.8em;
-
     }
   }
 }
